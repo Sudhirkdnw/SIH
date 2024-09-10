@@ -1,0 +1,17 @@
+{% load static %}
+{% include "Backend/header.html"%}
+
+<!---------------------------------HEADER END------------------------------------------>
+
+<body>
+    {% block TopNavigation %} {% endblock TopNavigation %} 
+    
+   
+            {% block pageContent %} {% endblock pageContent %}
+       
+    
+    {% block ScriptBlock %} {% endblock ScriptBlock %}
+    
+    
+<!---------------------------------FOOTER------------------------------------------>
+{% include "Backend/footer.html"%}

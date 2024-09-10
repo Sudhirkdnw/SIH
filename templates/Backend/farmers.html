@@ -1,0 +1,273 @@
+{% load static %}
+{% include "Backend/header.html"%}
+{% include "Backend/TopNavigation.html"%}
+{% include "Backend/leftsidebar.html"%}
+
+<body>
+
+
+  <!--start main wrapper-->
+  <main class="main-wrapper">
+    <div class="main-content">
+      <!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">All Farmers</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Farmers List</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="ms-auto">
+						<div class="btn-group">
+							
+						</div>
+					</div>
+				</div>
+				<!--end breadcrumb-->
+
+        <div class="product-count d-flex align-items-center gap-3 gap-lg-4 mb-4 fw-bold flex-wrap font-text1">
+          <a href="javascript:;"><span class="me-1">All</span><span class="text-secondary">(85472)</span></a>
+          <a href="javascript:;"><span class="me-1">New</span><span class="text-secondary">(145)</span></a>
+          <a href="javascript:;"><span class="me-1">Checkouts</span><span class="text-secondary">(89)</span></a>
+          <a href="javascript:;"><span class="me-1">Locals</span><span class="text-secondary">(5872)</span></a>
+          <a href="javascript:;"><span class="me-1">Subscribers</span><span class="text-secondary">(163)</span></a>
+          <a href="javascript:;"><span class="me-1">Top Reviews</span><span class="text-secondary">(8)</span></a>
+        </div>
+
+        <div class="position-relative">
+          <input class="form-control px-5" type="search" id="searchInput" placeholder="Search Customers" onkeyup="filterNames()">
+          <span class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50 fs-5">search</span>
+        </div>
+        <div class="col-auto flex-grow-1 overflow-auto">
+            <div class="btn-group position-static">
+              <div class="btn-group position-static">
+                <button type="button" class="btn btn-filter dropdown-toggle px-4" data-bs-toggle="dropdown" aria-expanded="false">
+                  State
+                </button>
+                <ul class="dropdown-menu" id="stateFilterMenu">
+                  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('All')">All States</a></li>
+                  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('California')">Bihar</a></li>
+                  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('Texas')">Uttar pradesh</a></li>
+                  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('Florida')">Rajasthan</a></li>
+                  <!-- Add more states as needed -->
+                </ul>
+              </div>
+              
+              <div class="btn-group position-static">
+                <button type="button" class="btn btn-filter dropdown-toggle px-4" data-bs-toggle="dropdown" aria-expanded="false">
+                  Source
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+                </ul>
+              </div>
+              <div class="btn-group position-static">
+                <button type="button" class="btn btn-filter dropdown-toggle px-4" data-bs-toggle="dropdown" aria-expanded="false">
+                  More Filters
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+                </ul>
+              </div>
+            </div>  
+          </div>
+          <div class="col-auto">
+            <div class="d-flex align-items-center gap-2 justify-content-lg-end">
+               <button class="btn btn-filter px-4"><i class="bi bi-box-arrow-right me-2"></i>Export</button>
+               <button class="btn btn-primary px-4"><i class="bi bi-plus-lg me-2"></i>Add Customers</button>
+            </div>
+          </div>
+        </div><!--end row-->
+        
+        <div class="card mt-4">
+          <div class="card-body">
+            <div class="customer-table">
+              <div class="table-responsive white-space-nowrap">
+                <table class="table align-middle">
+                  <thead class="table-light">     
+                    <tr>
+                      <th>
+                        <input class="form-check-input" type="checkbox">
+                      </th>
+                      <th>Farmers</th>
+                      <th>Contact</th>
+                      <th>Whatsapp</th>
+                      <th>Total Land</th>
+                      <th>Zip Code</th>
+                      <th>State</th>
+                      <th>Address</th>
+                    </tr>
+                  </thead>
+                  <tbody id="farmersList">
+                    {% for i in farmers %}
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox">
+                      </td>
+                      <td>
+                        <a class="d-flex align-items-center gap-3" href="javascript:;">
+                          <div class="customer-pic">
+                            <img src="{{ i.user.profile.avatar.url }}" class="rounded-circle" width="40" height="40" alt="">
+                          </div>
+                          <p class="mb-0 customer-name fw-bold">{{ i.user.first_name }} {{ i.user.last_name}}</p>
+                        </a>
+                      </td>
+                      <td>
+                        <a href="javascript:;" class="font-text1">{{ i.user.profile.contact }}</a>
+                      </td>
+                      <td><a href="https://api.whatsapp.com/send/?phone={{i.user.profile.contact}}&text=&type=phone_number&app_absent=0" target="_blank">
+                        <i class="material-icons-outlined">send</i>
+                      </a></td>
+                      <td>{{ i.user.profile.land }}</td>
+                      <td>{{ i.user.profile.zip_code }}</td>
+                      <td>{{ i.user.profile.state }}</td>
+                      <td>{{ i.user.profile.address }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        function filterNames() {
+          const input = document.getElementById('searchInput');
+          const filter = input.value.toLowerCase();
+          const tbody = document.getElementById('farmersList');
+          const rows = tbody.getElementsByTagName('tr');
+        
+          for (let i = 0; i < rows.length; i++) {
+            const nameCell = rows[i].getElementsByTagName('p')[0];
+            const nameText = nameCell ? nameCell.textContent || nameCell.innerText : '';
+            if (nameText.toLowerCase().indexOf(filter) > -1) {
+              rows[i].style.display = "";
+            } else {
+              rows[i].style.display = "none";
+            }
+          }
+        }
+       // Function to filter farmers by their state
+function filterByState(state) {
+  // Get all the rows from the table
+  var rows = document.querySelectorAll("#farmersList tr");
+  
+  // Loop through each row to filter based on state
+  rows.forEach(row => {
+      // Get the state cell value from the row
+      var stateCell = row.querySelector("td:nth-child(7)").textContent.trim();
+      
+      // Check if the row matches the selected state or if the selected state is 'All'
+      if (state === "All" || stateCell === state) {
+          row.style.display = ""; // Show the row
+      } else {
+          row.style.display = "none"; // Hide the row
+      }
+  });
+}
+
+// Example states in the dropdown menu
+document.getElementById("stateFilterMenu").innerHTML = `
+  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('All')">All States</a></li>
+  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('Bihar')">Bihar</a></li>
+  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('Uttar Pradesh')">Uttar Pradesh</a></li>
+  <li><a class="dropdown-item" href="javascript:;" onclick="filterByState('Rajasthan')">Rajasthan</a></li>
+  <!-- Add more states as needed -->
+`;
+
+        </script>
+        
+
+
+    </div>
+  </main>
+  <!--end main wrapper-->
+
+
+    <!--start overlay-->
+    <div class="overlay btn-toggle"></div>
+    <!--end overlay-->
+
+     <!--start footer-->
+     <footer class="page-footer">
+      <p class="mb-0">Copyright © 2024. All right reserved.</p>
+    </footer>
+    <!--top footer-->
+
+  <!--start switcher-->
+  <button class="btn btn-grd btn-grd-primary position-fixed bottom-0 end-0 m-3 d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+    <i class="material-icons-outlined">tune</i>Customize
+  </button>
+  
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="staticBackdrop">
+    <div class="offcanvas-header border-bottom h-70">
+      <div class="">
+        <h5 class="mb-0">Theme Customizer</h5>
+        <p class="mb-0">Customize your theme</p>
+      </div>
+      <a href="javascript:;" class="primaery-menu-close" data-bs-dismiss="offcanvas">
+        <i class="material-icons-outlined">close</i>
+      </a>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p>Theme variation</p>
+
+        <div class="row g-3">
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BlueTheme" checked>
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="BlueTheme">
+              <span class="material-icons-outlined">contactless</span>
+              <span>Blue</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="LightTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="LightTheme">
+              <span class="material-icons-outlined">light_mode</span>
+              <span>Light</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="DarkTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="DarkTheme">
+              <span class="material-icons-outlined">dark_mode</span>
+              <span>Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="SemiDarkTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="SemiDarkTheme">
+              <span class="material-icons-outlined">contrast</span>
+              <span>Semi Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BoderedTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="BoderedTheme">
+              <span class="material-icons-outlined">border_style</span>
+              <span>Bordered</span>
+            </label>
+          </div>
+        </div><!--end row-->
+
+      </div>
+    </div>
+  </div>
+  <!--start switcher-->
+
+{% include "Backend/footer.html"%}
+
+
+

@@ -1,0 +1,403 @@
+{% load static %}
+{% include "Backend/header.html"%}
+{% include "Backend/TopNavigation.html"%}
+{% include "Backend/leftsidebar.html"%}
+
+<style>
+    .css{
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	
+}
+.cont{
+	 margin-left: 2px;
+	 width: 60%;
+}
+.con{
+	display:flex;
+	justify-content:space-evenly;
+	align-items: flex-end;
+	gap:0.5rem;
+	height: 60px;
+
+}
+
+.quant{
+    margin-top: 3px;
+}
+</style>
+<body>
+
+  <!--start main wrapper-->
+  <main class="main-wrapper">
+    <div class="main-content">
+      <!--breadcrumb-->
+      <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="breadcrumb-title pe-3">Components</div>
+        <div class="ps-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Starter Page</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="ms-auto">
+          
+        </div>
+      </div>
+      <!--end breadcrumb-->
+      <form method="POST" enctype="multipart/form-data" action="{% url 'add_product' %}">
+        {% csrf_token %}
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-4">
+                <h5 class="mb-3">Product Name</h5>
+                <input type="text" class="form-control" name="title" placeholder="Product Name">
+              </div>
+              <div class="mb-4">
+                <h5 class="mb-3">Product Description</h5>
+                <textarea class="form-control" cols="4" rows="6" name="description" placeholder="write a description here.."></textarea>
+              </div>
+              <div class="mb-4">
+                <h5 class="mb-3">Display images</h5>
+                <input id="fancy-file-upload" type="file" name="images"   accept=".jpg, .png, image/jpeg, image/png" multiple class="ff_fileupload_hidden">
+                
+              </div>
+              
+              <div class="mb-4">
+                <h5 class="mb-3">Inventory</h5>
+
+                <div class="row g-3">
+                  <div class="col-12 col-lg-3">
+                    <div class="nav flex-column nav-pills border rounded vertical-pills overflow-hidden">
+                      <button class="nav-link px-4 rounded-0" data-bs-toggle="pill" data-bs-target="#Pricing"
+                        type="button"><i class="bi bi-tag-fill me-2"></i>Pricing</button>
+
+                      <button class="nav-link active px-4 rounded-0" data-bs-toggle="pill" data-bs-target="#Shipping"
+                        type="button"><i class="bi bi-truck-front-fill me-2"></i>Shipping</button>
+                      <button class="nav-link px-4 rounded-0" data-bs-toggle="pill" data-bs-target="#GlobalDelivery"
+                        type="button"><i class="bi bi-globe me-2"></i>Global Delivery</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-9">
+                    <div class="tab-content">
+                      <div class="tab-pane fade" id="Pricing">
+                        <div class="row g-3">
+                          <div class="col-12 col-lg-6">
+                            <h6 class="mb-2">Regular price</h6>
+                            <input class="form-control" name="regular_price" type="text" placeholder="₹₹₹">
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <h6 class="mb-2">Sale price</h6>
+                            <input class="form-control"  name="sale_price" type="text" placeholder="₹₹₹">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tab-pane fade show active" id="Shipping">
+                        <div class="d-flex flex-column h-100">
+                          <h6 class="mb-3">Shipping Type</h6>
+                          <div class="flex-1">
+                            <div class="mb-4">
+                              <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" value="Fullfilled by
+                                  Seller" name="shipping_type"
+                                  id="fullfilledBySeller">
+                                <label class="form-check-label fw-bold" for="fullfilledBySeller">Fullfilled by
+                                  Seller</label>
+                              </div>
+                              <div class="ps-4">
+                                <p class="mb-0">You’ll be responsible for product delivery. <br>Any damage or delay
+                                  during shipping may cost you a Damage fee.</p>
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <div class="form-check mb-1">
+                                <input class="form-check-input"  value="Fullfilled by Admin" type="radio" name="shipping_type"
+                                  id="fullfilledByPhoenix" checked="checked">
+                                <label class="form-check-label fw-bold d-flex align-items-center"
+                                  for="fullfilledByPhoenix">Fullfilled by Admin <span
+                                    class="badge bg-warning text-dark ms-2">Recommended</span></label>
+                              </div>
+                              <div class="ps-4">
+                                <p class="mb-0">Your product, Our responsibility.<br>For a measly fee, we will handle
+                                  the delivery process for you.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="fs--1 fw-semi-bold mb-0">See our <a class="fw-bold" href="#!">Delivery terms and
+                              conditions </a>for details.</p>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="GlobalDelivery">
+                        <div class="d-flex flex-column h-100">
+                          <h6 class="mb-3">Global Delivery</h6>
+                          <div class="flex-1">
+                            <div class="mb-4">
+                              <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="delivery"
+                                  id="Worldwidedelivery">
+                                <label class="form-check-label fw-bold" for="Worldwidedelivery">Worldwide
+                                  delivery</label>
+                              </div>
+                              <div class="ps-4">
+                                <p class="mb-0">Only available with Shipping method: <a href="#!">Fullfilled by
+                                    Admin</a></p>
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="selected_state" id="SelectedCountries"
+                                  checked="checked">
+                                <label class="form-check-label fw-bold d-flex align-items-center"
+                                  for="SelectedCountries">Selected State</label>
+                              </div>
+                              <div class="ps-4">
+                                <input class="form-control" type="text" placeholder="Type Country name">
+                              </div>
+                            </div>
+                            <div class="mb-0">
+                              <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="delivery" id="Localdelivery">
+                                <label class="form-check-label fw-bold" for="Localdelivery">Local delivery</label>
+                              </div>
+                              <div class="ps-4">
+                                <p class="mb-0">Only available with Shipping method: <a href="#!">Fullfilled by
+                                    Admin</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="mb-3">Product-type</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="AddCategory" class="form-label">Category</label>
+                  <select class="form-select"  name="category"  id="category">
+                    <option value="Kharif Crop">Kharif crop</option>
+                    <option value="Rabi Crop">Rabi crop</option>
+                    <option value="Vegetable">Vegetable</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Fertilizer">Fertilizer</option>
+                    <option value="Tool">Tool</option>
+                    <option value="cereal">cereal</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="quantity" class="form-label"></label>Quantity
+                  <div class="css">
+                    <div class="quant">
+                      <input type="text" class="form-control"  name="quantity"  id="quantity" placeholder="Quantity">
+                    </div>
+                    
+                      <label for="unit" class="form-label"></label>
+                      <select class="form-select" name="unit" id="unit">
+                        <option value="quintal">Quintal</option>
+                        <option value="Kg">kg</option>
+                        <option value="Gram">gram</option>
+                        <option value="Pound">pound</option>
+                        <option value="Litre">Litre</option>
+                        <option value="Items">Items</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="price_per_unit" class="form-label">Price</label>
+                  <input type="text" class="form-control" name="price_per_unit" id="Tags" placeholder="Price per unit">
+                </div>
+               
+              </div><!--end row-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="mb-3">Seller-details</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="seller_name"  class="form-label">Seller Name</label>
+                  <input type="text" name="seller_name" class="form-control"    id="seller_name" placeholder="Name">
+
+                  <label for="nationality"  class="form-label">Nationalism</label>
+                  <select class="form-select" name="nationality" id="nationality">
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Nepal">Nepal</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="contact_number"  class="form-label"></label>Contact No.
+                    <input type="text" name="contact_number" class="form-control"    id="contact_number" placeholder="Contact">
+                    </div>
+                    
+                    
+                  
+                </div>
+                <div class="col-12">
+                  <label for="Tags"  class="form-label">Address</label>
+                  <textarea type="text"  name="address" class="form-control" id="Tags" placeholder="Address of seller"></textarea>
+                </div>
+                <div class="col-12">
+                  <label for="Vendor" class="form-label">Email id</label>
+                  <input type="text" name="email" class="form-control" id="Vendor" placeholder="email @gmail.com">
+                </div>
+              </div><!--end row-->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3">
+              <button type="button" class="btn btn-outline-danger flex-fill"><i
+                  class="bi bi-x-circle me-2"></i>Discard</button>
+              <button type="button" class="btn btn-outline-success flex-fill"><i
+                  class="bi bi-cloud-download me-2"></i>Save Draft</button>
+              <button type="submit" class="btn btn-outline-primary flex-fill"><i
+                  class="bi bi-send me-2"></i>Publish</button>
+            </div>
+          </div>
+        </div>
+      </div><!--end row-->
+    </form>
+    </div>
+  </main>
+  <!--end main wrapper-->
+
+
+  <!--start overlay-->
+  <div class="overlay btn-toggle"></div>
+  <!--end overlay-->
+
+  <!--start footer-->
+  <footer class="page-footer">
+    <p class="mb-0">Copyright © 2024. All right reserved.</p>
+  </footer>
+  <!--top footer-->
+
+  <!--start switcher-->
+  <button class="btn btn-grd btn-grd-primary position-fixed bottom-0 end-0 m-3 d-flex align-items-center gap-2"
+    type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+    <i class="material-icons-outlined">tune</i>Customize
+  </button>
+
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="staticBackdrop">
+    <div class="offcanvas-header border-bottom h-70">
+      <div class="">
+        <h5 class="mb-0">Theme Customizer</h5>
+        <p class="mb-0">Customize your theme</p>
+      </div>
+      <a href="javascript:;" class="primaery-menu-close" data-bs-dismiss="offcanvas">
+        <i class="material-icons-outlined">close</i>
+      </a>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p>Theme variation</p>
+
+        <div class="row g-3">
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BlueTheme" checked>
+            <label
+              class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+              for="BlueTheme">
+              <span class="material-icons-outlined">contactless</span>
+              <span>Blue</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="LightTheme">
+            <label
+              class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+              for="LightTheme">
+              <span class="material-icons-outlined">light_mode</span>
+              <span>Light</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="DarkTheme">
+            <label
+              class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+              for="DarkTheme">
+              <span class="material-icons-outlined">dark_mode</span>
+              <span>Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="SemiDarkTheme">
+            <label
+              class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+              for="SemiDarkTheme">
+              <span class="material-icons-outlined">contrast</span>
+              <span>Semi Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BoderedTheme">
+            <label
+              class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+              for="BoderedTheme">
+              <span class="material-icons-outlined">border_style</span>
+              <span>Bordered</span>
+            </label>
+          </div>
+        </div><!--end row-->
+
+      </div>
+    </div>
+  </div>
+  <!--start switcher-->
+
+  <!--bootstrap js-->
+  <script src="{% static 'assets/Backend/js/bootstrap.bundle.min.js'%}"></script>
+
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/js/jquery.min.js'%}"></script>
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/plugins/perfect-scrollbar/js/perfect-scrollbar.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/metismenu/metisMenu.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/fancy-file-uploader/jquery.ui.widget.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/fancy-file-uploader/jquery.fileupload.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/fancy-file-uploader/jquery.iframe-transport.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/fancy-file-uploader/jquery.fancy-fileupload.js'%}"></script>
+  <script>
+    $('#fancy-file-upload').FancyFileUpload({
+      params: {
+        action: 'fileuploader'
+      },
+      maxfilesize: 1000000
+    });
+  </script>
+  <script src="{% static 'assets/Backend/plugins/simplebar/js/simplebar.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/js/main.js'%}"></script>
+
+
+</body>
+
+
+
+</html>

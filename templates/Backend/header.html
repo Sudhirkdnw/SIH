@@ -1,0 +1,40 @@
+{% load static%}
+<html lang="en" data-bs-theme="blue-theme">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page_title %}
+    <title>{{ page_title }} KISHAN ADMIN</title>
+    {% else %}
+  <title>KISHAN ADMIN</title>
+  {% endif %}
+  <!--favicon-->
+  <link rel="icon" href="{% static 'assets/Backend/images/favicon-32x32.png'%}" type="image/png">
+  <!-- loader-->
+	<link href="{% static 'assets/Backend/css/pace.min.css'%}" rel="stylesheet">
+	<script src="{% static 'assets/Backend/js/pace.min.js'%}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+  <!--plugins-->
+  <link href="{% static 'assets/Backend/plugins/perfect-scrollbar/css/perfect-scrollbar.css'%}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/Backend/plugins/metismenu/metisMenu.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/Backend/plugins/metismenu/mm-vertical.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/Backend/plugins/simplebar/css/simplebar.css'%}">
+  <!--bootstrap css-->
+  <link href="{% static 'assets/Backend/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/plugins/datatable/css/dataTables.bootstrap5.min.css'%}" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!--main css-->
+  <link href="{% static 'assets/Backend/css/bootstrap-extended.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/main.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/dark-theme.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/blue-theme.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/semi-dark.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/bordered-theme.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/Backend/sass/responsive.css'%}" rel="stylesheet">
+</head>

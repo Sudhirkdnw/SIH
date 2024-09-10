@@ -1,0 +1,137 @@
+{% extends 'Backend/base.html' %}
+{% load static %}
+
+
+{% block pageContent %} 
+<body>
+  <!--authentication-->
+
+  <div class="mx-3 mx-lg-0">
+
+  <div class="card my-5 col-xl-9 col-xxl-8 mx-auto rounded-4 overflow-hidden border-3 p-4">
+    <div class="row g-4">
+      <div class="col-lg-6 d-flex">
+        <div class="card-body">
+          <img src="{% static 'assets/Backend/images/logo1.png' %}" class="mb-4" width="145" alt="">
+          <h4 class="fw-bold">Register</h4>
+          <p class="mb-0">Create New User</p>
+          <div class="row gy-2 gx-0 my-4">
+         
+          </div>
+          <div class="separator">
+            <div class="line"></div>
+            <p class="mb-0 fw-bold">OR SIGN UP WITH</p>
+            <div class="line"></div>
+          </div>
+          <div class="form-body mt-4">
+            <form class="row g-3" id="register-user" method="POST" action="{% url 'register-user' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="col-12">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="first_name" id="first_name" value="{{ reg_form.data.first_name }}" required="required">
+              </div>
+              <div class="col-12">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="last_name" id="last_name" value="{{ reg_form.data.last_name }}" required="required">
+              </div>
+              <div class="col-12">
+                <label for="username" class="control-label">Username</label>
+                <input type="text" class="form-control " name="username" id="username" value="{{ reg_form.data.username }}" required="required">
+               </div>
+              <div class="col-12">
+                <label for="dob" class="control-label">Birthdate</label>
+                <input type="date" class="form-control " name="dob" id="dob" value="{{ reg_form.data.dob }}" required="required">
+              </div>
+              <div class="col-12">
+                <label for="contact" class="control-label">Contact</label>
+                <input type="text" class="form-control " name="contact" id="contact" value="{{ reg_form.data.contact }}" required="required">
+              </div>
+              <div class="col-12">
+                <label for="address" class="control-label">Address</label>
+                <textarea rows="3" class="form-control " name="address" id="address" required="required">{{ reg_form.data.address }}</textarea>
+               </div>
+              <div class="col-12">
+                <label for="email" class="control-label">Email</label>
+                <input type="email" class="form-control " name="email" id="email" value="{{ reg_form.data.email }}" required="required">
+              </div>
+              <div class="col-12">
+                <label for="password1" class="control-label">Password</label>
+                <div class="input-group" id="show_hide_password">
+                  <input type="password" class="form-control border-end-0" name="password1" id="password1" value="{{ reg_form.data.password1 }}" required="required">
+                  <a href="javascript:;" class="input-group-text bg-transparent"><i class="bi bi-eye-slash-fill"></i></a>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="password2" class="control-label">Confirm Password</label>
+                <input type="password" class="form-control " name="password2" id="password2" value="{{ reg_form.data.password2 }}" required="required">
+              </div>
+
+              <div class="col-12">
+                <label for="avatar" class="control-label">User Avatar</label>
+                <input type="file" class="form-control rounded-0" name="avatar" id="avatar" accept="images/*" required="required">
+            </div>
+            {% for field in reg_form %} {% for error in field.errors %}
+            <div class="alert alert-danger my-2">
+                <p>{{ error }}</p>
+            </div>
+            {% endfor %} {% endfor %}
+              <div class="col-12">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                  <label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms &amp; Conditions</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-grd-info">Register</button>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="text-start">
+                  <p class="mb-0">Already have an account? <a href="../login/">Sign in here</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-lg-flex d-none">
+        <div class="p-3 rounded-4 w-100 d-flex align-items-center justify-content-center bg-grd-info">
+          <img src="{% static 'assets/Backend/images/auth/register1.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div><!--end row-->
+  </div>
+
+</div>
+{% endblock pageContent %}
+<!--authentication-->
+
+
+
+
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/js/jquery.min.js'%}"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#show_hide_password a").on('click', function (event) {
+        event.preventDefault();
+        if ($('#show_hide_password input').attr("type") == "text") {
+          $('#show_hide_password input').attr('type', 'password');
+          $('#show_hide_password i').addClass("bi-eye-slash-fill");
+          $('#show_hide_password i').removeClass("bi-eye-fill");
+        } else if ($('#show_hide_password input').attr("type") == "password") {
+          $('#show_hide_password input').attr('type', 'text');
+          $('#show_hide_password i').removeClass("bi-eye-slash-fill");
+          $('#show_hide_password i').addClass("bi-eye-fill");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+
+</html>

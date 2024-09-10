@@ -1,0 +1,144 @@
+
+{% load static %}
+{% include 'Backend/header.html'%}
+{% include 'Backend/TopNavigation.html'%}
+{% include 'Backend/leftsidebar.html'%}
+<body>
+
+ 
+  <!--start main wrapper-->
+  <main class="main-wrapper">
+    <div class="main-content">
+      <!--breadcrumb-->
+		<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+			<div class="breadcrumb-title pe-3">AI</div>
+			<div class="ps-3">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb mb-0 p-0">
+						<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">Pridict Crop</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="ms-auto">
+				<div class="btn-group">
+					
+					
+				</div>
+			</div>
+		</div>
+		<!--end breadcrumb-->
+      
+	  <div class="card rounded-4" >
+	    <div class="card-body">
+		    <h4>Crop Resources</h4>
+        <form method="post" id="farmerForm">
+          {% csrf_token %}
+          <label for="cropType" class="form-label">Crop Type:</label>
+          <input type="text" id="cropType" class="form-control" name="cropType" required>
+
+          <label for="landArea"  class="form-label">Land Area (in sq. meters):</label>
+          <input type="number" id="landArea"  class="form-control" name="landArea" required>
+          
+          <label for="soilquality" class="form-label">Soil Quality:</label>
+          <select id="soilquality" class="form-select" name="soilquality" required>
+              <option value="sandy">Sandy</option>
+              <option value="clay">Clay</option>
+              <option value="loam">Loam</option>
+              <option value="slit">Slit</option>  
+          </select>
+
+          <div class="position-relative" >
+              <img src="{% static 'assets/img/soil.png' %}" alt="profile_image"
+                  class="w-70 border-radius-lg shadow-sm">
+          </div>
+          <br>
+         
+
+          <label for="season" class="form-label" >Planting Season:</label>
+          <select id="season" class="form-select" name="season" required>
+              <option value="summer">Summer</option>
+              <option value="spring">Spring</option>
+              <option value="autumn">Autumn</option>
+              <option value="winter">Winter</option>
+          </select>
+
+          <br>
+
+          <button class="btn btn-grd-primary px-4 cursor-pointer"  type="submit">Send</button>
+      </form>
+      {% if response %}
+            <div id="aiResponse" class="mt-4">
+                <h2 class="text-primary">AI Response:</h2>
+                <pre class="text-dark" style="font-size: 1.875em; color: rgb(255 0 87) !important;">{{ response }}</pre>
+            </div>
+            <a href="/order"><button class="btn btn-grd-primary px-4 cursor-pointer" >Send</button></a>
+            {% endif %}
+				</div>
+	  </div>
+        
+    </div>
+  </main>
+  <!--end main wrapper-->
+
+
+    <!--start overlay-->
+    <div class="overlay btn-toggle"></div>
+    <!--end overlay-->
+
+
+     <!--start footer-->
+     <footer class="page-footer">
+      <p class="mb-0">Copyright © 2024. All right reserved.</p>
+    </footer>
+    <!--top footer-->
+    <script>
+      // JavaScript code to toggle visibility based on the selected input type
+      document.addEventListener('DOMContentLoaded', function () {
+          const responseText = document.getElementById('responseText');
+          if (responseText) {
+              responseText.innerHTML = responseText.innerHTML.replace(/\\/g, '<br>*');
+          }
+  
+          // Responsive toggle for input fields
+          const landAreaInput = document.getElementById('landArea');
+          const cropTypeInput = document.getElementById('cropType');
+          const seasonInput = document.getElementById('season');
+  
+          const setInputsWidth = () => {
+              const windowWidth = window.innerWidth;
+              if (windowWidth <= 600) {
+                  landAreaInput.style.width = '100%';
+                  cropTypeInput.style.width = '100%';
+                  seasonInput.style.width = '100%';
+              } else {
+                  landAreaInput.style.width = 'calc(50% - 10px)';
+                  cropTypeInput.style.width = 'calc(50% - 10px)';
+                  seasonInput.style.width = 'calc(50% - 10px)';
+              }
+          };
+  
+          setInputsWidth();
+  
+          window.addEventListener('resize', setInputsWidth);
+      });
+  </script>
+  
+  <!--bootstrap js-->
+  <script src="{% static 'assets/Backend/js/bootstrap.bundle.min.js'%}"></script>
+
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/js/jquery.min.js'%}"></script>
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/plugins/perfect-scrollbar/js/perfect-scrollbar.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/metismenu/metisMenu.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/simplebar/js/simplebar.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/js/main.js'%}"></script>
+
+
+</body>
+
+
+<!-- Mirrored from codervent.com/maxton/demo/vertical-menu/pages-starter-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2024 20:13:53 GMT -->
+</html>

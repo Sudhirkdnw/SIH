@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg3.jpg');
+    background-size: cover;
+    background-position: right;
+    margin: 0;
+    padding: 20px;
+    
+}
+@keyframes borderRotation {
+    0% {
+      border-color: rgb(161, 202, 148);
+    }
+    25% {
+      border-color: rgb(106, 182, 196);
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: yellow;
+    }
+    100% {
+      border-color: rgb(36, 196, 207);
+    }
+  }
+  
+  .container {
+    position: relative;
+    padding: 20px;
+    border: 5px solid;
+    border-radius: 10px; /* Adjust if you want rounded corners */
+    animation: borderRotation 4s linear infinite;
+  }
+.container {
+    max-width: 800px;
+    margin: auto;
+   
+    ;
+    padding: 31px;
+    border-radius: 57px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border:2x solid black;
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #181f4A; /* Background color for h1 to match your theme */
+}
+
+.post-form, .search-bar {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #9a2825;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7a1a1a;
+}
+h1 {
+    text-align: center;
+    color: #198638;
+}
+
+.post-form {
+    margin-bottom: 20px;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.post-form button {
+    background-color: #181f4A;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+.post-form button:hover{
+    background-color: #fff;
+    color: #181f4A;
+    
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment-section input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}

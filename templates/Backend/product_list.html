@@ -1,0 +1,183 @@
+{% load static %}
+{% include "Backend/header.html"%}
+{% include "Backend/TopNavigation.html"%}
+{% include "Backend/leftsidebar.html"%}
+
+<body>
+
+  <!--start main wrapper-->
+  <main class="main-wrapper">
+    <div class="main-content">
+      <!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Components</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Data Table</li>
+							</ol>
+						</nav>
+					</div>
+					
+				</div>
+				<!--end breadcrumb-->
+      
+				<h6 class="mb-0 text-uppercase">DataTable Import</h6>
+				<hr>
+				<div class="card">
+					<div class="card-body">
+						<div class="table-responsive">
+							<table id="example2" class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>Product Name</th>
+										<th>Category</th>
+										<th>Quantity</th>
+										<th>Price</th>
+										<th>Seller Name</th>
+										<th>Phone No.</th>
+										{% comment %} <th>State</th> {% endcomment %}
+										
+									</tr>
+								</thead>
+								<tbody>
+									{% for i in product_list %}
+									<tr>
+										<td>{{ i.title }}</td>
+										<td>{{ i.category }}</td>
+										<td>{{ i.quantity }}</td>
+										<td>{{ i.price_per_unit }}</td>
+										<td>{{ i.seller_name }}</td>
+										<td>{{ i.contact_number }}</td>
+									</tr>
+									{% endfor %}
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Name</th>
+										<th>Position</th>
+										<th>Office</th>
+										<th>Age</th>
+										<th>Start date</th>
+										<th>Salary</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+    </div>
+  </main>
+  <!--end main wrapper-->
+
+
+    <!--start overlay-->
+    <div class="overlay btn-toggle"></div>
+    <!--end overlay-->
+
+
+
+     <!--start footer-->
+     <footer class="page-footer">
+      <p class="mb-0">Copyright © 2024. All right reserved.</p>
+    </footer>
+    <!--top footer-->
+
+   <!--start switcher-->
+  <button class="btn btn-grd btn-grd-primary position-fixed bottom-0 end-0 m-3 d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+    <i class="material-icons-outlined">tune</i>Customize
+  </button>
+  
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="staticBackdrop">
+    <div class="offcanvas-header border-bottom h-70">
+      <div class="">
+        <h5 class="mb-0">Theme Customizer</h5>
+        <p class="mb-0">Customize your theme</p>
+      </div>
+      <a href="javascript:;" class="primaery-menu-close" data-bs-dismiss="offcanvas">
+        <i class="material-icons-outlined">close</i>
+      </a>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p>Theme variation</p>
+
+        <div class="row g-3">
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BlueTheme" checked>
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="BlueTheme">
+              <span class="material-icons-outlined">contactless</span>
+              <span>Blue</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="LightTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="LightTheme">
+              <span class="material-icons-outlined">light_mode</span>
+              <span>Light</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="DarkTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="DarkTheme">
+              <span class="material-icons-outlined">dark_mode</span>
+              <span>Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="SemiDarkTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="SemiDarkTheme">
+              <span class="material-icons-outlined">contrast</span>
+              <span>Semi Dark</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-6">
+            <input type="radio" class="btn-check" name="theme-options" id="BoderedTheme">
+            <label class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4" for="BoderedTheme">
+              <span class="material-icons-outlined">border_style</span>
+              <span>Bordered</span>
+            </label>
+          </div>
+        </div><!--end row-->
+
+      </div>
+    </div>
+  </div>
+  <!--start switcher-->
+
+  <!--bootstrap js-->
+  <script src="{% static 'assets/Backend/js/bootstrap.bundle.min.js'%}"></script>
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/js/jquery.min.js'%}"></script>
+  <!--plugins-->
+  <script src="{% static 'assets/Backend/plugins/perfect-scrollbar/js/perfect-scrollbar.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/metismenu/metisMenu.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+	<script src="{% static 'assets/Backend/plugins/datatable/js/dataTables.bootstrap5.min.js'%}"></script>
+	<script>
+		$(document).ready(function() {
+			$('#example').DataTable();
+		  } );
+	</script>
+	<script>
+		$(document).ready(function() {
+			var table = $('#example2').DataTable( {
+				lengthChange: false,
+				buttons: [ 'copy', 'excel', 'pdf', 'print']
+			} );
+		 
+			table.buttons().container()
+				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
+		} );
+	</script>
+  <script src="{% static 'assets/Backend/plugins/simplebar/js/simplebar.min.js'%}"></script>
+  <script src="{% static 'assets/Backend/js/main.js'%}"></script>
+
+
+</body>
+</html>

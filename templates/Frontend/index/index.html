@@ -1,0 +1,877 @@
+{% load static %}
+{% include "Frontend/index/header.html" %}
+
+    <!-- Start Hero -->
+    <section
+        class="relative overflow-hidden pt-48 after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-[56rem] after:h-[56rem] after:bg-gradient-to-tl after:to-amber-400/30  after:from-fuchsia-600/30 dark:after:to-amber-400/50 dark:after:from-fuchsia-600/50 after:blur-[200px] after:rounded-full after:-z-1">
+        <div class="container relative z-2">
+            <div class="grid grid-cols-1 text-center">
+                <div class="">
+                    <h4 class="font-bold lg:leading-normal leading-normal text-4xl lg:text-6xl mb-5">The AI Services
+                        <br> Plaform for <span
+                            class="typewrite bg-gradient-to-br from-amber-400 to-fuchsia-600 text-transparent bg-clip-text"
+                            data-period="2000"
+                            data-type='[ "Plant Disease Detection", "Inventory.io", "Smart Irrigation" ]'> <span
+                                class="wrap"></span>
+                    </h4>
+                    <p class="text-slate-400 dark:text-white/60 text-lg max-w-xl mx-auto">Artificial intelligence &
+                        Machine Learning tools make smarter farming solution and IoT devices helps in irrigation and
+                        many more!</p>
+
+                    <div class="mt-6">
+                        <a href="/index/signup/"
+                            class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-amber-400 hover:bg-amber-500 border-amber-400 hover:border-amber-500 text-white rounded-md">Try
+                            For Free</a>
+
+                        <p class="text-slate-400 dark:text-white/60 text-sm mt-3">No credit card required. Free beta
+                            version trial</p>
+                    </div>
+                </div>
+                <div class="relative mt-8 z-3">
+                    <img src="{%static 'assets/Frontend/images/index/lap.png'%}" alt="" class="mover">
+                </div>
+            </div><!--end grid-->
+        </div>
+
+        <div
+            class="relative after:content-[''] after:absolute lg:after:-bottom-40 after:-bottom-28 after:end-0 after:start-0 after:mx-auto xl:after:w-[56rem] lg:after:w-[48rem] md:after:w-[32rem] after:w-[22rem] xl:after:h-[56rem] lg:after:h-[48rem] md:after:h-[32rem] after:h-[22rem] after:border-2 after:border-dashed after:border-slate-700/10 dark:after:border-slate-200/10 after:rounded-full after:-z-1 before:content-[''] before:absolute lg:before:-bottom-72 before:-bottom-56 before:end-0 before:start-0 before:mx-auto xl:before:w-[72rem] lg:before:w-[64rem] md:before:w-[48rem] before:w-[24rem] xl:before:h-[72rem] lg:before:h-[64rem] md:before:h-[48rem] before:h-[24rem] before:border-2 before:border-dashed before:border-slate-700/10 dark:before:border-slate-200/10 before:rounded-full before:-z-1">
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Start -->
+    <section class="relative md:py-24 py-16">
+        <div class="container relative">
+            <div class="grid grid-cols-1 pb-6 text-center">
+                <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">AI + traditonal
+                    farming = <br> outstanding <span
+                        class="bg-gradient-to-br from-amber-400 to-fuchsia-600 text-transparent bg-clip-text">Kisan.Ai</span>
+                </h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto">Kisan.Ai is one end complete solution fo farmer by providing
+                    services like inventory.io, kisan-Community.io, plant-sehat.io and many more!</p>
+            </div><!--end grid-->
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+
+                <div class="relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800">
+                    <a href="">
+                        <div
+                            class="p-6 pb-0 relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-72 after:h-72 after:bg-gradient-to-tl after:to-amber-400 after:from-fuchsia-600 after:blur-[80px] after:rounded-full">
+                            <img src="{%static 'assets/Frontend/images/index/inventory.png'%}"
+                                class="relative rounded-t-md shadow-md dark:shadow-slate-700 z-1" alt="">
+                        </div>
+
+                        <div class="p-6">
+                            <h5 class="text-lg font-semibold">Inventory.io</h5>
+                            <p class="text-slate-400 mt-3">Stock management tool with 3D inventory store, Smart Data
+                                Visualisation, OpenCV stock in-out, hand-on reports.</p>
+                        </div>
+                    </a>
+                </div><!--end content-->
+
+                <div class="relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800">
+                    <a href="">
+                        <div
+                            class="p-6 pb-0 relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-72 after:h-72 after:bg-gradient-to-tl after:to-amber-400 after:from-fuchsia-600 after:blur-[80px] after:rounded-full">
+                            <img src="{%static 'assets/Frontend/images/index/plant-sehat.png'%}"
+                                class="relative rounded-t-md shadow-md dark:shadow-slate-700 z-1" alt="">
+                        </div>
+
+                        <div class="p-6">
+                            <h5 class="text-lg font-semibold">Plant-sehat.io</h5>
+                            <p class="text-slate-400 mt-3">AI & Machine learning modal which detect disease of plant by
+                                scanning it. Gives AI suggestion according to health of plant.
+                            </p>
+                        </div>
+                    </a>
+                </div><!--end content-->
+
+                <div class="relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800">
+                    <a href="">
+                        <div
+                            class="p-6 pb-0 relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-72 after:h-72 after:bg-gradient-to-tl after:to-amber-400 after:from-fuchsia-600 after:blur-[80px] after:rounded-full">
+                            <img src="{%static 'assets/Frontend/images/index/smart-irrigation.png'%}"
+                                class="relative rounded-t-md shadow-md dark:shadow-slate-700 z-1" alt="">
+                        </div>
+
+                        <div class="p-6">
+                            <h5 class="text-lg font-semibold">Smart-irrigation.io</h5>
+                            <p class="text-slate-400 mt-3">IOT Based auto water supply project for farmers according to
+                                plant water need.
+                            </p>
+                        </div>
+                    </a>
+                </div><!--end content-->
+
+                <div class="relative overflow-hidden bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800">
+                    <a href="">
+                        <div
+                            class="p-6 pb-0 relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-72 after:h-72 after:bg-gradient-to-tl after:to-amber-400 after:from-fuchsia-600 after:blur-[80px] after:rounded-full">
+                            <img src="{%static 'assets/Frontend/images/index/kisan-mandi.png'%}"
+                                class="relative rounded-t-md shadow-md dark:shadow-slate-700 z-1" alt="">
+                        </div>
+
+                        <div class="p-6">
+                            <h5 class="text-lg font-semibold">Kisan-Community.io</h5>
+                            <p class="text-slate-400 mt-3">A direct marketplace for farmers and vendors where they can
+                                directly sell and buy goods.</p>
+                        </div>
+                    </a>
+                </div>
+                <!--end content-->
+
+            </div>
+            <!--end grid-->
+        </div>
+        <!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-6">
+                <div class="relative order-1 md:order-2">
+                    <div
+                        class="relative overflow-hidden rounded-lg border border-amber-400/5 bg-gradient-to-tl to-amber-400/30  from-fuchsia-600/30 dark:to-amber-400/50 dark:from-fuchsia-600/50 pe-6 pt-6 lg:ms-8">
+                        <img src="{%static 'assets/Frontend/images/index/2.png'%}" class="ltr:rounded-tr-lg rtl:rounded-tl-lg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="order-2 md:order-1">
+                    <h4 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Detect plant
+                        disease <br> with Plant-sehat.io</h4>
+                    <p class="text-slate-400">"Usually, our farmers are unaware of diseases captured by the plants due
+                        to insects and weeds. Our AI feature will help to predict plant disease and also give suggestion
+                        for cure it."</p>
+                    <ul class="list-none text-slate-400 mt-4">
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Smart plant disease detection</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> AI suggestions for cure disease in plant</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Mobile support, Upload easily plant pic in it.</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> 100+ plant disease prediction</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="#" class="hover:text-amber-400 font-medium duration-500">Find Out More <i
+                                class="mdi mdi-chevron-right text-[20px] align-middle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-6">
+                <div
+                    class="relative overflow-hidden rounded-lg border border-amber-400/5 bg-gradient-to-tl to-amber-400/30  from-fuchsia-600/30 dark:to-amber-400/50 dark:from-fuchsia-600/50 ps-6 pt-6 lg:me-8">
+                    <img src="{%static 'assets/Frontend/images/index/1.png'%}" class="ltr:rounded-tl-lg rtl:rounded-tr-lg"
+                        alt="">
+                </div>
+
+                <div class="">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">100+ Farmers
+                        managing their inventory<br>with Inventory.io</h3>
+                    <p class="text-slate-400 max-w-xl">"Usually farmers are unaware of billing and online transactions
+                        but with invantory.io then can manage there inventory and generate Data driven reports and even
+                        manage the stcok."</p>
+
+                    <ul class="list-none text-slate-400 mt-4">
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i>Keep record of sales & inventory/li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i>Analyse data & generate graphucal report </li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i>3D cart in which inventory is showcase</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Stock In-Out using OpenCV camera</li>
+
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="#" class="hover:text-amber-400 font-medium duration-500">Find Out More <i
+                                class="mdi mdi-chevron-right text-[20px] align-middle"></i></a>
+                    </div>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid grid-cols-1 pb-6 text-center">
+                <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Amazing Features
+                </h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto">Kisan.ai represents a significant integration of AI within
+                    the agriculture sector. It can helps farmers to optimize their practices, enhance crop yields, and
+                    make data-driven decisions.</p>
+            </div><!--end grid-->
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-compost text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Crop Health
+                            Monitoring</a>
+                        <p class="text-slate-400 mt-3">Manage crop health by scaning it, identify diseases early & give
+                            suggestion.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-google-earth text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Smart AI Soil
+                            Analysis</a>
+                        <p class="text-slate-400 mt-3">AI can analyze soil health, advising farmers on the right
+                            fertilizers and needs.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-weather-lightning-rainy text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Weather
+                            Forecasting</a>
+                        <p class="text-slate-400 mt-3">Analyze weather patterns with accurate forecasts of particular
+                            city & area.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-bookmark-outline text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Smart Yield
+                            Prediction</a>
+                        <p class="text-slate-400 mt-3">ML algorithm predict crop yields based on data and current crop
+                            conditions.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-sprinkler text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">IoT based
+                            Irrigation</a>
+                        <p class="text-slate-400 mt-3">Optimize irrigation schedules based on weather prediction & soil
+                            moisture level.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-shopping text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Marketplace
+                            for Farmers</a>
+                        <p class="text-slate-400 mt-3">Vendors & Farmers can sell and buy seeds and crops in that
+                            marketplace.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-archive-eye text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Inventory
+                            Management</a>
+                        <p class="text-slate-400 mt-3">Manage inventory and optimize logistic of good and yield with AI
+                            assistant.</p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="px-6 py-10 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg bg-white dark:bg-slate-900">
+                    <i
+                        class="mdi mdi-cube-scan text-4xl bg-gradient-to-tl to-amber-400 from-fuchsia-600 text-transparent bg-clip-text"></i>
+
+                    <div class="content mt-7">
+                        <a href="#" class="title h5 text-lg font-medium hover:text-amber-400 duration-500">Argumented
+                            Reality</a>
+                        <p class="text-slate-400 mt-3">See there stock in virtual 3D shelf, manage in-out using OpenCV.
+                        </p>
+
+                        <div class="mt-5">
+                            <a href="#" class="hover:text-amber-400 font-medium duration-500">Read More <i
+                                    class="mdi mdi-arrow-right align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-6">
+                <div
+                    class="relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-72 after:h-72 after:bg-gradient-to-tl after:to-amber-400 after:from-fuchsia-600 after:blur-[80px] after:rounded-full p-6 bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-slate-800">
+                    <div class="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800 z-1">
+                        <div class="relative">
+                            <video>
+                                <source src="{%static 'assets/Frontend/images/index/Kisan_AI intro.mp4'%}" type="video/mp4">
+                            </video>
+                            <a href="#"
+                                class="absolute top-2 start-2 rounded-full p-0.5 bg-white dark:bg-slate-900 shadow dark:shadow-slate-800 z-10"><img
+                                    src="{%static 'assets/Frontend/images/index/india.png'%}" class="h-7 w-7 rounded-full"
+                                    alt=""></a>
+                        </div>
+
+                        <div class="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
+                            <a href="https://youtu.be/oMkHDWYIr_o?si=rQgd7_HeLMxI_qss" data-type="youtube"
+                                data-id="oMkHDWYIr_o"
+                                class="lightbox lg:h-16 h-14 lg:w-16 w-14 rounded-full shadow-lg dark:shadow-gray-800 inline-flex items-center justify-center bg-white dark:bg-slate-900 hover:bg-amber-400 dark:hover:bg-amber-400 text-amber-400 hover:text-white duration-500 ease-in-out mx-auto">
+                                <i class="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <a href="#"
+                            class="py-[6px] px-2 inline-flex items-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold m-0.5"><img
+                                src="{%static 'assets/Frontend/images/index/india.png'%}" class="h-5 w-5 me-1" alt="">
+                            Italian</a>
+                        <a href="#"
+                            class="py-[6px] px-2 inline-flex items-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold m-0.5"><img
+                                src="{%static 'assets/Frontend/images/index/germany.png'%}" class="h-5 w-5 me-1" alt="">
+                            Hindi</a>
+                        <a href="#"
+                            class="py-[6px] px-2 inline-flex items-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold m-0.5"><img
+                                src="{%static 'assets/Frontend/images/index/italy.png'%}" class="h-5 w-5 me-1" alt="">
+                            Russian</a>
+                        <a href="#"
+                            class="py-[6px] px-2 inline-flex items-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold m-0.5"><img
+                                src="{%static 'assets/Frontend/images/index/russia.png'%}" class="h-5 w-5 me-1" alt="">
+                            Spanish</a>
+                        <a href="#"
+                            class="py-[6px] px-2 inline-flex items-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold m-0.5"><img
+                                src="{%static 'assets/Frontend/images/index/usa.png'%}" class="h-5 w-5 me-1" alt=""> English</a>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Detect plant
+                        disease early by<br>just scanning the plant.</h3>
+                    <p class="text-slate-400 max-w-xl">"Usually, plant get died or give low crops due to insect and
+                        diseases. By using this AI you can monitor plant health by scanning it & also give treatment
+                        suggested by AI-doctor."</p>
+
+                    <ul class="list-none text-slate-400 mt-4">
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Analyse & monitor plant health</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Detect plant disease early.</li>
+                        <li class="mb-2 flex items-center"><i data-feather="check-circle"
+                                class="text-amber-400 h-5 w-5 me-2"></i> Diagnose & provide plant health suggestion.
+                        </li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="#" class="hover:text-amber-400 font-medium duration-500">Find Out More <i
+                                class="mdi mdi-chevron-right text-[20px] align-middle"></i></a>
+                    </div>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+
+
+            
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center md:gap-[30px]">
+                <div class="lg:col-span-4 md:mb-0 mb-8">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Have a
+                        question?</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto mb-6">Artificial intelligence makes it fast easy to
+                        farmers in farming practise nowdays. Using Kisan.Ai it sort's every small problems of farmers.
+                    </p>
+
+                    <a href="/index/contact/"
+                        class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-amber-400 border-gray-100 dark:border-gray-800 hover:border-amber-400 dark:hover:border-amber-400 text-slate-900 dark:text-white hover:text-white rounded-md">Contact
+                        Us</a>
+                </div>
+
+                <div class="lg:col-span-8 md:mt-0 mt-8" id="accordion-collapse" data-accordion="collapse">
+                    <div class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
+                        <h2 class="text-base font-semibold" id="accordion-collapse-heading-1">
+                            <button type="button"
+                                class="flex justify-between items-center p-5 w-full font-medium text-start"
+                                data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                                aria-controls="accordion-collapse-body-1">
+                                <span>How does it helps the farmers in daily life?</span>
+                                <svg data-accordion-icon class="w-4 h-4 rotate-180 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-1" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-1">
+                            <div class="p-5">
+                                <p class="text-slate-400 dark:text-gray-400">Kisan.Ai is an one solution which help the
+                                    farmers to grow digitally. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                        <h2 class="text-base font-semibold" id="accordion-collapse-heading-2">
+                            <button type="button"
+                                class="flex justify-between items-center p-5 w-full font-medium text-start"
+                                data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-2">
+                                <span>Is Iot smart irrigation helps in water management? </span>
+                                <svg data-accordion-icon class="w-4 h-4 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-2" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-2">
+                            <div class="p-5">
+                                <p class="text-slate-400 dark:text-gray-400">Using weather condition & plant requirment
+                                    of water water is supply to it.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                        <h2 class="text-base font-semibold" id="accordion-collapse-heading-3">
+                            <button type="button"
+                                class="flex justify-between items-center p-5 w-full font-medium text-start"
+                                data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-3">
+                                <span>What is role of inventory.io in farmers daily life?</span>
+                                <svg data-accordion-icon class="w-4 h-4 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-3" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-3">
+                            <div class="p-5">
+                                <p class="text-slate-400 dark:text-gray-400">It manages the compelete inventory of the
+                                    farmers and help them to track it. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                        <h2 class="text-base font-semibold" id="accordion-collapse-heading-4">
+                            <button type="button"
+                                class="flex justify-between items-center p-5 w-full font-medium text-start"
+                                data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-4">
+                                <span>What kind of support is available for kisan-mandi.io ?</span>
+                                <svg data-accordion-icon class="w-4 h-4 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-4" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-4">
+                            <div class="p-5">
+                                <p class="text-slate-400 dark:text-gray-400">Kisan-mandi.io can provide a marketplace to
+                                    farmers & vendors to buy and purchase goods digitally and provide support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="container relative md:mt-24 mt-16">
+            <div class="grid grid-cols-1 pb-6 text-center">
+                <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Testimonials</h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto">Reviews which we get from our loved ones, how AI helps them
+                    in their farming practice and change their life.</p>
+            </div><!--end grid-->
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+                <div class="relative bg-white dark:bg-slate-900 p-4 rounded-md shadow dark:shadow-gray-700">
+                    <img src="{%static 'assets/Frontend/images/index/b1.jpg'%}" class="rounded-md shadow dark:shadow-gray-700"
+                        alt="">
+                    <div class="pt-4">
+                        <div class="flex justify-between items-center">
+                            <div class="space-x-1">
+                                <a href="#"
+                                    class="bg-amber-400/10 text-amber-500 dark:text-amber-400 text-[12px] font-semibold px-2.5 py-0.5 rounded h-5">Plant-sehat.io</a>
+
+                            </div>
+
+                            <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-star h-4 w-4">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg> <span class="ms-1 text-slate-400">5 star</span></span>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="/index/blog_detail/"
+                                class="text-lg font-semibold hover:text-amber-400">Plant-sehat.io is an amazing tool for
+                                disease detection and also provide guidance to cure it.</a>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="flex items-center">
+                                <img src="{%static 'assets/Frontend/images/index/01.jpg'%}" class="h-7 w-7 rounded-full" alt="">
+                                <a href="#" class="ms-1 text-slate-400 hover:text-amber-400">Ramesh Pal</a>
+                            </span>
+
+                            <span class="flex items-center"><i data-feather="calendar" class="h-4 w-4"></i> <span
+                                    class="ms-1 text-slate-400">August 10, 2024</span></span>
+                        </div>
+                    </div>
+                </div><!--end blog content-->
+
+                <div class="relative bg-white dark:bg-slate-900 p-4 rounded-md shadow dark:shadow-gray-700">
+                    <img src="{%static 'assets/Frontend/images/index/b2.png'%}" class="rounded-md shadow dark:shadow-gray-700"
+                        alt="">
+                    <div class="pt-4">
+                        <div class="flex justify-between items-center">
+                            <div class="space-x-1">
+                                <a href="#"
+                                    class="bg-amber-400/10 text-amber-500 dark:text-amber-400 text-[12px] font-semibold px-2.5 py-0.5 rounded h-5">Iot
+                                    smart irrigation</a>
+                            </div>
+
+                            <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-star h-4 w-4">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg> <span class="ms-1 text-slate-400">4.5 star</span></span>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="/index/blog_detail/" class="text-lg font-semibold hover:text-amber-400">Iot Smart
+                                Irrigation helps me in watering plant automatic when required. Very satisfied with
+                                it.</a>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="flex items-center">
+                                <img src="{%static 'assets/Frontend/images/index/02.jpg'%}" class="h-7 w-7 rounded-full" alt="">
+                                <a href="#" class="ms-1 text-slate-400 hover:text-amber-400">Shyaamlal</a>
+                            </span>
+
+                            <span class="flex items-center"><i data-feather="calendar" class="h-4 w-4"></i> <span
+                                    class="ms-1 text-slate-400">July 30, 2024</span></span>
+                        </div>
+                    </div>
+                </div><!--end blog content-->
+
+                <div class="relative bg-white dark:bg-slate-900 p-4 rounded-md shadow dark:shadow-gray-700">
+                    <img src="{%static 'assets/Frontend/images/index/b3.png'%}" class="rounded-md shadow dark:shadow-gray-700"
+                        alt="">
+                    <div class="pt-4">
+                        <div class="flex justify-between items-center">
+                            <div class="space-x-1">
+                                <a href="#"
+                                    class="bg-amber-400/10 text-amber-500 dark:text-amber-400 text-[12px] font-semibold px-2.5 py-0.5 rounded h-5">Inventory.io</a>
+                            </div>
+
+                            <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-star h-4 w-4">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg> <span class="ms-1 text-slate-400">5 star</span></span>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="/index/blog_detail/"
+                                class="text-lg font-semibold hover:text-amber-400">Inventory.io manages stock very
+                                easily, track all record of sales from online & offline.</a>
+                        </div>
+
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="flex items-center">
+                                <img src="{%static 'assets/Frontend/images/index/03.jpg'%}" class="h-7 w-7 rounded-full" alt="">
+                                <a href="#" class="ms-1 text-slate-400 hover:text-amber-400">Raju Sharma</a>
+                            </span>
+
+                            <span class="flex items-center"><i data-feather="calendar" class="h-4 w-4"></i> <span
+                                    class="ms-1 text-slate-400">August 24, 2023</span></span>
+                        </div>
+                    </div>
+                </div><!--end blog content-->
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section>
+
+    <!-- Start Footer -->
+    <div class="relative">
+        <div
+            class="shape absolute xl:-bottom-[30px] lg:-bottom-[16px] md:-bottom-[13px] -bottom-[5px] start-0 end-0 overflow-hidden z-1 rotate-180 text-white dark:text-slate-900">
+            <svg class="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <footer class="relative bg-gray-900 overflow-hidden">
+        <span
+            class="absolute blur-[200px] w-[300px] h-[300px] rounded-full top-0 -start-[0] bg-gradient-to-tl to-amber-400  from-fuchsia-600 z-0"></span>
+        <div class="container-fluid relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 text-center">
+                    <div class="">
+                        <h4
+                            class="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl text-white tracking-normal mb-4">
+                            Start Your Free Trail.</h4>
+                        <p class="text-white/70 text-lg max-w-xl mx-auto">Artificial intelligence makes it fast easy to
+                            practice farming practice without tension of crop disease & irrigation.</p>
+
+                        <div class="mt-6">
+                            <a href="../login/"
+                                class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-amber-400 border-gray-800 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-400 text-white rounded-md">Join
+                                Now!</a>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </div><!--end container fluid-->
+
+        <div class="container relative text-center">
+            <div class="grid grid-cols-1 border-t border-gray-800 dark:border-slate-800">
+                <div class="py-[30px] px-0">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="md:text-start text-center">
+                            <a href="#" class="text-[22px] focus:outline-none">
+                                <img src="{%static 'assets/Frontend/images/index/kisan.ai_logo.png'%}"
+                                    class="mx-auto md:me-auto md:ms-0" alt="">
+                            </a>
+                        </div>
+
+                        <ul class="list-none footer-list md:text-end text-center mt-6 md:mt-0">
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-shopping-cart h-4 w-4 align-middle" title="Buy Now">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-dribbble h-4 w-4 align-middle"
+                                        title="dribbble">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path
+                                            d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-linkedin h-4 w-4 align-middle"
+                                        title="Linkedin">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-facebook h-4 w-4 align-middle"
+                                        title="facebook">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-instagram h-4 w-4 align-middle"
+                                        title="instagram">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-twitter h-4 w-4 align-middle"
+                                        title="twitter">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="inline"><a href=""
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-mail h-4 w-4 align-middle"
+                                        title="email">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg></a></li>
+                            <li class="inline"><a href="" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-file-text h-4 w-4 align-middle"
+                                        title="customization">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg></a></li>
+                        </ul>
+                    </div><!--end grid-->
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="py-[30px] px-0 border-t border-gray-800 dark:border-slate-800">
+            <div class="container relative text-center">
+                <div class="grid grid-cols-1">
+                    <div class="text-center">
+                        <p class="text-gray-400">©
+                            <script>document.write(new Date().getFullYear())</script> Kisan.Ai. Design with <i
+                                class="mdi mdi-heart text-orange-700"></i> by <a href="" target="_blank"
+                                class="text-reset">Kisan-Tech Titans</a>.
+                        </p>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </div>
+    </footer><!--end footer-->
+    <!-- End Footer -->
+
+
+
+
+
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top"
+        class="back-to-top fixed hidden text-lg rounded z-10 bottom-5 end-5 h-9 w-9 text-center bg-amber-400 hover:bg-amber-500 text-white leading-9 justify-center items-center duration-500"><i
+            data-feather="arrow-up" class="h-4 w-4 stroke-[3]"></i></a>
+    <!-- Back to top -->
+
+    <!-- Switcher -->
+    <div class="fixed top-1/4 -right-2 z-3">
+        <span class="relative inline-block rotate-90">
+            <input type="checkbox" class="checkbox opacity-0 absolute" id="chk">
+            <label
+                class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
+                for="chk">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-moon h-[18px] w-[18px] text-yellow-500">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-sun h-[18px] w-[18px] text-yellow-500">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+            </label>
+        </span>
+    </div>
+    <!-- Switcher -->
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="{%static 'assets/Frontend/js/index/tobii.min.js'%}"></script>
+    <script src="{%static 'assets/Frontend/js/index/feather.min.js'%}"></script>
+    <script src="{%static 'assets/Frontend/js/index/plugins.init.js'%}"></script>
+    <script src="{%static 'assets/Frontend/js/index/app.js'%}"></script>
+    <!-- JAVASCRIPTS -->
+</body>
+
+</html>

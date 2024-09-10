@@ -1,0 +1,35 @@
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #1a202c; /* Dark background for the whole page */
+}
+
+#toggleButton {
+    transition: all 0.3s ease;
+}
+
+#toggleButton.active {
+    background-color: #f59e0b; /* Amber color */
+    border-color: #f59e0b;
+    color: white;
+}
+
+header, footer {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #1a202c; /* Darker gray */
+    color: white;
+}
+
+.bg-slate-800 {
+    background-color: #2d3748; /* Darker slate color for sections */
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+canvas {
+    max-height: 300px;
+}

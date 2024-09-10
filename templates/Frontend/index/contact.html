@@ -1,0 +1,280 @@
+{% load static %}
+{% include "Frontend/index/header.html" %}
+
+    <section class="relative lg:py-24 py-16">
+        <div class="container">
+            <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                <div class="lg:col-span-7 md:col-span-6">
+                    <img src="assets/images/contact.svg" alt="">
+                </div>
+
+                <div class="lg:col-span-5 md:col-span-6">
+                    <div class="lg:ms-5">
+                        <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
+                            <h3 class="mb-6 text-2xl leading-normal font-semibold">Get in touch !</h3>
+
+                            <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
+                                <p class="mb-0" id="error-msg"></p>
+                                <div id="simple-msg"></div>
+                                <div class="grid lg:grid-cols-12 lg:gap-6">
+                                    <div class="lg:col-span-6 mb-5">
+                                        <label for="name" class="font-semibold">Your Name:</label>
+                                        <input name="name" id="name" type="text"
+                                            class="form-input w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-amber-400 dark:border-gray-800 dark:focus:border-amber-400 focus:ring-0 mt-2"
+                                            placeholder="Name :">
+                                    </div>
+
+                                    <div class="lg:col-span-6 mb-5">
+                                        <label for="email" class="font-semibold">Your Email:</label>
+                                        <input name="email" id="email" type="email"
+                                            class="form-input w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-amber-400 dark:border-gray-800 dark:focus:border-amber-400 focus:ring-0 mt-2"
+                                            placeholder="Email :">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1">
+                                    <div class="mb-5">
+                                        <label for="subject" class="font-semibold">Your Question:</label>
+                                        <input name="subject" id="subject"
+                                            class="form-input w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-amber-400 dark:border-gray-800 dark:focus:border-amber-400 focus:ring-0 mt-2"
+                                            placeholder="Subject :">
+                                    </div>
+
+                                    <div class="mb-5">
+                                        <label for="comments" class="font-semibold">Your Comment:</label>
+                                        <textarea name="comments" id="comments"
+                                            class="form-input w-full py-2 px-3 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-amber-400 dark:border-gray-800 dark:focus:border-amber-400 focus:ring-0 mt-2 h-40"
+                                            placeholder="Message :"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" id="submit" name="send"
+                                    class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-amber-400 hover:bg-amber-500 border-amber-400 hover:border-amber-500 text-white rounded-md">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end container-->
+
+        <div class="container lg:mt-24 mt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+                <div class="text-center px-6">
+                    <div class="relative overflow-hidden text-transparent -m-3">
+                        <i data-feather="hexagon"
+                            class="h-24 w-24 fill-amber-400/5 group-hover:fill-white/10 mx-auto"></i>
+                        <div
+                            class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-amber-400 rounded-xl group-hover:text-white duration-500 text-3xl flex align-middle justify-center items-center">
+                            <i data-feather="phone"></i>
+                        </div>
+                    </div>
+
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-lg font-semibold">Phone</h5>
+                        <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and
+                            benefit</p>
+
+                        <div class="mt-5">
+                            <a href="tel:+152534-468-854" class="hover:text-amber-400">+152 534-468-854</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center px-6">
+                    <div class="relative overflow-hidden text-transparent -m-3">
+                        <i data-feather="hexagon"
+                            class="h-24 w-24 fill-amber-400/5 group-hover:fill-white/10 mx-auto"></i>
+                        <div
+                            class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-amber-400 rounded-xl group-hover:text-white duration-500 text-3xl flex align-middle justify-center items-center">
+                            <i data-feather="mail"></i>
+                        </div>
+                    </div>
+
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-lg font-semibold">Email</h5>
+                        <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and
+                            benefit</p>
+
+                        <div class="mt-5">
+                            <a href="mailto:contact@example.com" class="hover:text-amber-400">contact@example.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center px-6">
+                    <div class="relative overflow-hidden text-transparent -m-3">
+                        <i data-feather="hexagon"
+                            class="h-24 w-24 fill-amber-400/5 group-hover:fill-white/10 mx-auto"></i>
+                        <div
+                            class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-amber-400 rounded-xl group-hover:text-white duration-500 text-3xl flex align-middle justify-center items-center">
+                            <i data-feather="map-pin"></i>
+                        </div>
+                    </div>
+
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-lg font-semibold">Location</h5>
+                        <p class="text-slate-400 mt-3">C/54 Northwest Freeway, Suite 558, <br> Houston, USA 485</p>
+
+                        <div class="mt-5">
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                                data-type="iframe" class="video-play-icon read-more lightbox hover:text-amber-400">View
+                                on Google map</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End Section-->
+
+    <!-- Google Map -->
+    <div class="container-fluid relative mt-20">
+        <div class="grid grid-cols-1">
+            <div class="w-full leading-[0] border-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                    style="border:0" class="w-full h-[500px]" allowfullscreen></iframe>
+            </div>
+        </div><!--end grid-->
+    </div><!--end container-->
+    <!-- Google Map -->
+
+    <!-- Start Footer -->
+    <div class="relative">
+        <div
+            class="shape absolute xl:-bottom-[30px] lg:-bottom-[16px] md:-bottom-[13px] -bottom-[5px] start-0 end-0 overflow-hidden z-1 rotate-180 text-white dark:text-slate-900">
+            <svg class="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <footer class="relative bg-gray-900 overflow-hidden">
+        <span
+            class="absolute blur-[200px] w-[300px] h-[300px] rounded-full top-0 -start-[0] bg-gradient-to-tl to-amber-400  from-fuchsia-600 z-0"></span>
+        <div class="container-fluid relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 text-center">
+                    <div class="">
+                        <h4
+                            class="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl text-white tracking-normal mb-4">
+                            Start Your Free Trail.</h4>
+                        <p class="text-white/70 text-lg max-w-xl mx-auto">Artificial intelligence makes it fast easy to
+                            create content for your blog, social media, website, and more!</p>
+
+                        <div class="mt-6">
+                            <a href="#"
+                                class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-amber-400 border-gray-800 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-400 text-white rounded-md">Join
+                                Now!</a>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </div><!--end container fluid-->
+
+        <div class="container relative text-center">
+            <div class="grid grid-cols-1 border-t border-gray-800 dark:border-slate-800">
+                <div class="py-[30px] px-0">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="md:text-start text-center">
+                            <a href="#" class="text-[22px] focus:outline-none">
+                                <img src="assets/images/logo-light.png" class="mx-auto md:me-auto md:ms-0" alt="">
+                            </a>
+                        </div>
+
+                        <ul class="list-none footer-list md:text-end text-center mt-6 md:mt-0">
+                            <li class="inline"><a href="https://1.envato.market/mortalai" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="shopping-cart" class="h-4 w-4 align-middle"
+                                        title="Buy Now"></i></a></li>
+                            <li class="inline"><a href="https://dribbble.com/shreethemes" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="dribbble" class="h-4 w-4 align-middle" title="dribbble"></i></a>
+                            </li>
+                            <li class="inline"><a href="http://linkedin.com/company/shreethemes" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="linkedin" class="h-4 w-4 align-middle" title="Linkedin"></i></a>
+                            </li>
+                            <li class="inline"><a href="https://www.facebook.com/shreethemes" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="facebook" class="h-4 w-4 align-middle" title="facebook"></i></a>
+                            </li>
+                            <li class="inline"><a href="https://www.instagram.com/shreethemes/" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="instagram" class="h-4 w-4 align-middle" title="instagram"></i></a>
+                            </li>
+                            <li class="inline"><a href="https://x.com/shreethemes" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="twitter" class="h-4 w-4 align-middle" title="twitter"></i></a>
+                            </li>
+                            <li class="inline"><a href="mailto:support@shreethemes.in"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="mail" class="h-4 w-4 align-middle" title="email"></i></a></li>
+                            <li class="inline"><a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank"
+                                    class="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-slate-800 rounded-md hover:border-amber-400 dark:hover:border-amber-400 hover:bg-amber-400 dark:hover:bg-amber-400 text-slate-300 hover:text-white"><i
+                                        data-feather="file-text" class="h-4 w-4 align-middle"
+                                        title="customization"></i></a></li>
+                        </ul><!--end icon-->
+                    </div><!--end grid-->
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="py-[30px] px-0 border-t border-gray-800 dark:border-slate-800">
+            <div class="container relative text-center">
+                <div class="grid grid-cols-1">
+                    <div class="text-center">
+                        <p class="text-gray-400">©
+                            <script>document.write(new Date().getFullYear())</script> Mortal.Ai. Design with <i
+                                class="mdi mdi-heart text-orange-700"></i> by <a href="https://shreethemes.in/"
+                                target="_blank" class="text-reset">Shreethemes</a>.
+                        </p>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </div>
+    </footer><!--end footer-->
+    <!-- End Footer -->
+
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top"
+        class="back-to-top fixed hidden text-lg rounded z-10 bottom-5 end-5 h-9 w-9 text-center bg-amber-400 hover:bg-amber-500 text-white leading-9 justify-center items-center duration-500"><i
+            data-feather="arrow-up" class="h-4 w-4 stroke-[3]"></i></a>
+    <!-- Back to top -->
+
+    <!-- Switcher -->
+    <div class="fixed top-1/4 -right-2 z-3">
+        <span class="relative inline-block rotate-90">
+            <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+            <label
+                class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
+                for="chk">
+                <i data-feather="moon" class="h-[18px] w-[18px] text-yellow-500"></i>
+                <i data-feather="sun" class="h-[18px] w-[18px] text-yellow-500"></i>
+                <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+            </label>
+        </span>
+    </div>
+    <!-- Switcher -->
+
+    <!-- LTR & RTL Mode Code -->
+    <div class="fixed top-1/3 -right-3 z-50">
+        <a href="#" id="switchRtl">
+            <span
+                class="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-semibold rtl:block ltr:hidden">LTR</span>
+            <span
+                class="py-1 px-3 relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-semibold ltr:block rtl:hidden">RTL</span>
+        </a>
+    </div>
+    <!-- LTR & RTL Mode Code -->
+
+    <!-- JAVASCRIPTS -->
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/plugins.init.js"></script>
+    <script src="assets/js/app.js"></script>
+    <!-- JAVASCRIPTS -->
+</body>
+
+<!-- Mirrored from shreethemes.in/mortal/layouts/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 21:47:02 GMT -->
+
+</html>
