@@ -76,8 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SIH.wsgi.application'
-
+WSGI_APPLICATION = 'SIH.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
